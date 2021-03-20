@@ -12,7 +12,7 @@
 1. Client push product data by using api /api/push
 2. The application validates data, name must not be empty and score must be number from 0 to 5
 3. The application gets current count and total score of the above product (identified by name)
-4. The application updates new count and new total score of that product to database
+4. The application updates new count and new total score of that product to database, if product is new (did not exist on database) insert product with score and count (=1) into database.
 5. For logging for other usage as well as monitor or review data, there is a trigger that when inserting or updating product_stat, the database will insert new record about that product(name, score, time), this process is not in requirement, and can turn off by dropping this trigger
 6. The application calculates new mean (new_total_score/new_count) and returns the result to client.
 
