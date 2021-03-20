@@ -1,0 +1,49 @@
+*****************************************
+
+** Inspectorio - Technical Test **
+
+*****************************************
+
+The stronger an outcome from a predictive model is, the more informative features set contains. To enrich features, there are so many approaches and computing an average value is one of them. As a data engineer, you are requested to implement a function to get arithmetic mean of scores of inspectors. A score, which is gave by internal reviewers, is a device that enables Inspectorio to measure how good quality a factory examining is. 
+
+
+PROBLEM FORMULATION
+
+	+ INPUT: {"UUID": String, "score": Integer} 
+	  (Score is value from 0 to 5)
+
+	+ OUTPUT: {"UUID": String, "mean": Float} 
+	  (An average score of the given UUID over time)
+
+EXAMPLES:
+
+	Chronologically post JSON objects with UUID "a1-b1" to the service
+	+ {"UUID": "a1-b1", "score": 5}, the service returns 5 because "a1-b1" identity didn't exist inside your database
+	+ {"UUID": "a1-b1", "score": 3}, the service returns 4 because "a1-b1" exists in your database and previous value was 5 hence (5+3)/2 = 4
+	+ {"UUID": "a1-b1", "score": 4}, this time is third time hence the service returns (5+3+4)/3 = 4
+
+
+
+REQUIREMENTS
+
+	You must use Python 3.x.
+	1. Design a proper strategy to store data
+	2. Develop a REST API that can consume POST requests and return results as described above. Besides, you are required to write unit tests
+	3. Document everything which includes a clean design with elaboration
+	4. Your project should have at least a clean code (Pylint or Flake8...),
+	5. The final solution needs to be generic and optimized enough to consume k requests successively with k is relative big
+
+
+
+INSTRUCTIONS
+
+	To complete the test, please complete the following steps:
+	1. Complete all requirements above.
+	2. Initialize a new repository in Github or Gitlab
+	3. Send the link of repository to the following email: phuong@inspectorio.com      
+
+
+
+DURATION
+
+	+ All candidates must submit all results within 7 days after receiving this test.
